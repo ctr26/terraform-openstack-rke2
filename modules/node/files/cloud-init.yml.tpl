@@ -1,8 +1,5 @@
 #cloud-config
-packages:
- - cifs-utils
- - nfs-common
- - nfs-kernel-server
+packages: {{ $cloud_init_packages }}
 
 write_files:
 - path: /usr/local/bin/wait-for-node-ready.sh
